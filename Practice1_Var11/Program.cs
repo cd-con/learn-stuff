@@ -1,4 +1,4 @@
-﻿// Практическая #1 вариант #11
+// Практическая #1 вариант #11
 
 // Возвращает массив с числами, полученными из ввода пользователя
 double[] getUserInput()
@@ -6,7 +6,7 @@ double[] getUserInput()
     Console.Write("Введите числа через точку с запятой:");
     string[] rawUserInput = Console.ReadLine().Split(";"); // Получаем "сырой" ввод пользователя в виде массива строк
     double[] userInput = new double[rawUserInput.Length]; // Создаём массив чисел, равный по длине массиву ввода
-
+                                                          // Для выполнения условия задачи можно ограничить 3 элементами
     // Конвертируем массив строк в массив чисел
     for (int i = 0; i < rawUserInput.Length; i++)
     {
@@ -16,8 +16,8 @@ double[] getUserInput()
     return userInput; // Возвращаем
 }
 
-// Сортировка пузыриком?
-double[] sort(double[] sortArray)
+// Сортировка пузыриком
+double[] bubbleSortInverted(double[] sortArray)
 {
     for (int iter = 0; iter < sortArray.Length; iter++) // Проходим по массиву
     {
@@ -36,7 +36,7 @@ double[] sort(double[] sortArray)
 }
 
 // Вывод
-foreach (double item in sort(getUserInput()))
+foreach (double item in bubbleSortInverted(getUserInput()))
 {
     Console.Write(item.ToString() + " ");
 }
