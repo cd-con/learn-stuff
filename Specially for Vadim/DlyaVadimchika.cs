@@ -5,32 +5,42 @@
 
         public static void Run()
         {
-            // Инициализация массива
-            int.TryParse(Console.ReadLine(), out int x);
+            Console.Write("Введите кол-во столбцов матрицы: ");
+            int.TryParse(Console.ReadLine(), out int matrixSizeX);
 
-            int[] arr = new int[x];
-            Random rnd = new();
+            Console.Write("Введите кол-во строк матрицы: ");
+            int.TryParse(Console.ReadLine(), out int matrixSizeY);
 
-            for (int i = 0; i < x; i++)
+
+            int[,] matrix = new int[matrixSizeX, matrixSizeY];
+
+
+            for (int x = 0; x < matrixSizeX; x++)
             {
-                arr[i] = rnd.Next(1000);
-            }
-
-
-            // Решение
-            for (int i = 1; i < arr.Length - 1; i++)
-            {
-                if (arr[i] > arr[i-1] && arr[i] > arr[i + 1])
+                for (int y = 0; y < matrixSizeY; y++)
                 {
-                    arr[i] = 0;
+                    Console.Write($"[{x},{y}] = ");
+                    int.TryParse(Console.ReadLine(), out int value);
+                    matrix[x, y] = value;
                 }
             }
 
-            // Вывод
-            foreach (var item in arr)
+            int minMultValue = int.MaxValue;
+            int minMultValueColumnID = 0;
+            for (int y = 0; y < matrixSizeY; y++)
             {
-                Console.Write($"{item} ");
-            }
+                int columnMultValue = 1;
+                for (int x = 0; x < matrixSizeX; x++)
+                {
+                   columnMultValue *= matrix[x, y];
+                }
+                if (minMultValue > columnMultValue)
+                {
+                    minMultValue = columnMultValue;
+                    minMultValueColumnID = y;
+                 }
+             }
+            Console.WriteLine($"Столбец {minMultValueColumnID} имеет наименьший результат ({minMultValue})");
         }
     }
 }
