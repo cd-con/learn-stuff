@@ -1,9 +1,9 @@
-﻿// Вводим путь
+// Вводим путь
 Console.Write("Введите путь до файла: ");
 string path = Console.ReadLine();
 
 // Решение
-using (StreamReader sr = new(new FileStream(path, FileMode.Open)))
+using (StreamReader sr = new(path))
 {
     string readLine;
     int bCount = 0;
