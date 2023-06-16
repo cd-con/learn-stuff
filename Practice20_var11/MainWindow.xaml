@@ -1,0 +1,24 @@
+﻿<Window x:Class="Practice20_var11.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Practice20_var11"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Menu>
+            <MenuItem Header="Меню">
+                <!-- О практической -->
+                <MenuItem Header="О практической" Click="PracticeInfo_button_Click"/>
+                <!-- О программе -->
+                <MenuItem Header="О программе" Click="About_button_Click"/>
+            </MenuItem>
+            <!-- Выход -->
+            <MenuItem Header="Выход" Click="YouShallNotPass_button_Click"/>
+        </Menu>
+        <TextBox x:Name="Task20_1_Result" IsReadOnly="True" HorizontalAlignment="Left" Margin="11,74,0,0" TextWrapping="Wrap" Text="Результат" VerticalAlignment="Top" Width="442" Height="58"/>
+        <Label Content=" что-то, я не знаю, как написать, короче по заданю" HorizontalAlignment="Left" Margin="124,33,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="Task20_1_Calc" ToolTip="Нажмите чтобы найти минимальное число" Content="Генерировать" HorizontalAlignment="Left" Height="20" Margin="11,36,0,0" VerticalAlignment="Top" Width="113" Click="Task20_1_Calc_Click"/>
+    </Grid>
+</Window>

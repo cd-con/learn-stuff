@@ -1,0 +1,40 @@
+﻿<Window x:Name="MainWindow1" x:Class="Practice17_var11.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Practice17_var11"
+        mc:Ignorable="d"
+        Title="Haram.exe" Height="460" Width="800"
+        ResizeMode="NoResize">
+    <Grid x:Name="AppGrid">
+        <GroupBox x:Name="Task1" Header="Задание 1" Margin="0,0,400,184" BorderBrush="Black">
+            <Grid>
+                <TextBox x:Name="x1" HorizontalAlignment="Left" Margin="34,63,0,0" TextWrapping="Wrap" Text="X1" VerticalAlignment="Top" Width="120" GotFocus="x1_GotFocus" TextChanged="CalcSquareOfRect"/>
+                <TextBox x:Name="y1" HorizontalAlignment="Left" Margin="172,63,0,0" TextWrapping="Wrap" Text="Y1" VerticalAlignment="Top" Width="120" GotFocus="y1_GotFocus" TextChanged="CalcSquareOfRect"/>
+                <TextBox x:Name="x2" HorizontalAlignment="Left" Margin="34,93,0,0" TextWrapping="Wrap" Text="X2" VerticalAlignment="Top" Width="120" GotFocus="x2_GotFocus" TextChanged="CalcSquareOfRect"/>
+                <TextBox x:Name="y2"  HorizontalAlignment="Left" Margin="172,93,0,0" TextWrapping="Wrap" Text="Y2" VerticalAlignment="Top" Width="120" GotFocus="y2_GotFocus" TextChanged="CalcSquareOfRect"/>
+                <Label x:Name="Task1Result" Content="Введите значения." HorizontalAlignment="Left" Margin="34,116,0,0" VerticalAlignment="Top"/>
+            </Grid>
+        </GroupBox>
+        <GroupBox x:Name="Task2" Header="Задание 2" Margin="400,0,0,184" BorderBrush="Black">
+            <Grid Height="362">
+                <TextBox x:Name="Size" HorizontalAlignment="Left" Margin="10,63,0,0" TextWrapping="Wrap" Text="Размер (в байтах)" GotFocus="Size_GotFocus" TextChanged="ConvertBytesToMB" VerticalAlignment="Top" Width="184"/>
+                <Label x:Name="Task2Result" Content="Введите значение." HorizontalAlignment="Left" Margin="10,86,0,0" VerticalAlignment="Top"/>
+            </Grid>
+        </GroupBox>
+        <GroupBox x:Name="footer" Header="Ещё больше кнопок" Margin="0,260,0,0" BorderBrush="Black">
+            <Grid>
+                <Image Stretch="Fill" HorizontalAlignment="Left" Height="69" Margin="10,10,0,0" VerticalAlignment="Top" Width="368" Source="https://i.imgur.com/5oDYrPph.jpg"/>
+                <Button x:Name="ToadCode" Content="Ad: Здесь тихо и квакают жабки..." HorizontalAlignment="Left" Margin="10,84,0,0" VerticalAlignment="Top" Width="368" Click="ToadCode_Click"/>
+
+
+                <Image Stretch="Fill" HorizontalAlignment="Left" Height="69" Margin="401,10,0,0" VerticalAlignment="Top" Width="368" Source="https://кулебаки-округ.рф/netcat_files/multifile/2538/2_piglet_looking_over_fence_john_daniels.jpg"></Image>
+                <Button x:Name="Pork" Content="Ad: Месячный запас свинины" HorizontalAlignment="Left" Margin="401,84,0,0" VerticalAlignment="Top" Width="368" Click="Pork_Click"/>
+
+                <Button Content="О программе" HorizontalAlignment="Left" Height="27" Margin="10,109,0,0" VerticalAlignment="Top" Width="138" Click="About_Click"/>
+                <Button Content="Выход" HorizontalAlignment="Left" Height="27" Margin="631,109,0,0" VerticalAlignment="Top" Width="138" Click="Exit_Click"/>
+            </Grid>
+        </GroupBox>
+    </Grid>
+</Window>

@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<brichki>
+	<brichka>
+		<name>Пежо</name>
+		<country>Франция</country>
+	</brichka>
+	<brichka>
+		<name>Лада</name>
+		<country>Россия</country>
+	</brichka>
+	<brichka>
+		<name>Рено</name>
+		<country>Франция</country>
+	</brichka>
+	<brichka>
+		<name>Нива</name>
+		<country>Россия</country>
+	</brichka>
+	<brichka>
+		<name>Форд</name>
+		<country>США</country>
+	</brichka>
+	<brichka>
+		<name>Вольво</name>
+		<country>Швеция</country>
+	</brichka>
+	<brichka>
+		<name>БМВ</name>
+		<country>Германия</country>
+	</brichka>
+	<brichka>
+		<name>Мерседес</name>
+		<country>Германия</country>
+	</brichka>
+</brichki>
