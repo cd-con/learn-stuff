@@ -1,0 +1,47 @@
+﻿<Window x:Class="Practice23_24_ULTIMATE.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Practice23_24_ULTIMATE"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="500" Width="800">
+    <Grid>
+        <GroupBox Header="Canvas" Margin="0,0,400,0">
+            <Canvas x:Name="mainCanvas"/>
+        </GroupBox>
+        <GroupBox Header="Controls" Margin="400,0,0,10">
+            <Grid>
+                <GroupBox Header="Color" Margin="0,0,0,225">
+                    <Grid>
+                        <Slider x:Name="R" HorizontalAlignment="Left" Margin="110,28,0,0" VerticalAlignment="Top" Width="120" Maximum="255" ValueChanged="Slider_ValueChanged"/>
+                        <Slider x:Name="G" HorizontalAlignment="Left" Margin="110,51,0,0" VerticalAlignment="Top" Width="120" Maximum="255" ValueChanged="Slider_ValueChanged"/>
+                        <Slider x:Name="B" HorizontalAlignment="Left" Margin="110,74,0,0" VerticalAlignment="Top" Width="120" Maximum="255" ValueChanged="Slider_ValueChanged"/>
+                        <TextBox x:Name="ColorPicker_HEX" HorizontalAlignment="Left" Margin="110,112,0,0" TextWrapping="Wrap" Text="HEX" VerticalAlignment="Top" Width="120" TextChanged="ColorPicker_HEX_TextChanged"/>
+                        <Rectangle x:Name="Preview" Stroke="Black" Margin="275,37,22,120" RenderTransformOrigin="0.47,0.593"/>
+                        <Label Content="Target" HorizontalAlignment="Left" Margin="10,152,0,0" VerticalAlignment="Top"/>
+                        <RadioButton x:Name="TargetFill" Content="Fill" HorizontalAlignment="Left" Margin="73,158,0,0" VerticalAlignment="Top"/>
+                        <RadioButton x:Name="TargetStroke" Content="Stroke" HorizontalAlignment="Left" Margin="136,158,0,0" VerticalAlignment="Top"/>
+                        <Slider x:Name="StrokeSizeSlider" HorizontalAlignment="Left" Margin="-29,73,0,0" VerticalAlignment="Top" Width="120" Minimum="1" Maximum="255" RenderTransformOrigin="0.5,0.5" ValueChanged="StrokeSizeSlider_ValueChanged">
+                            <Slider.RenderTransform>
+                                <TransformGroup>
+                                    <ScaleTransform/>
+                                    <SkewTransform/>
+                                    <RotateTransform Angle="-90"/>
+                                    <TranslateTransform/>
+                                </TransformGroup>
+                            </Slider.RenderTransform>
+                        </Slider>
+                    </Grid>
+                </GroupBox>
+                <GroupBox Header="24" Margin="0,246,0,0" Height="195" VerticalAlignment="Top">
+                    <Grid>
+                        <Button Content="Отрисовать 24" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Click="Button_Click"/>
+                        <Button Content="Стереть позор" HorizontalAlignment="Left" Margin="12,48,0,0" VerticalAlignment="Top" Click="Button_Click_1"/>
+                    </Grid>
+                </GroupBox>
+            </Grid>
+        </GroupBox>
+
+    </Grid>
+</Window>
